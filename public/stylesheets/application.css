@@ -1,0 +1,343 @@
+
+/****************************************/
+/******* Common Directory Styles ********/
+/****************************************/
+
+img.portrait {
+	border: 4px solid #FFFFFF;
+}
+
+div#content.two-column {
+	padding: 0px;
+}
+
+div#content.two-column #main {
+	width: 668px;
+    float: left;
+    padding: 30px 35px;
+}
+div#content.two-column #sidebar {
+    width: 229px;
+    float: right;
+    padding: 30px 10px;
+    background: url("../images/directory_sidebar_bg.gif") repeat-x scroll 0 0 #FFFFFF;
+    border-left: 1px solid #FFFFFF;
+    min-height: 350px;
+    overflow: hidden
+}
+
+p.error {
+	border: 1px solid #B33739;
+	background-color: #FAD2D3;
+	padding: 20px;
+}
+
+p.success {
+    border: 1px solid #D1CC2E;
+    background-color: #FAF8CD;
+    padding: 20px;	
+}
+
+/****************************************/
+/*********** Directory List *************/
+/****************************************/
+
+#browseWidget{
+	height: 50px;
+	clear: both;	
+}
+#browseWidget #browseByLetter {
+	background: url("../images/directory_alphabet_bg.gif") repeat-x scroll 0 0 #F1EEEE;
+	display: block;
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: outside;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    background-color: #F1EEEE;
+    padding: 0;
+    margin: 15px 0;
+    font-size: 0.95em;
+    height: 30px;
+    width: 916px;
+}
+#browseWidget #browseByLetter li {
+	background: none;
+    padding: 8px 0px;
+    text-align: center;
+    border-right: 1px solid #bbb;
+    display: inline-block;
+    float: left;
+}
+#browseWidget #browseByLetter li:hover {
+	background-color: #F8F8F8;	
+}
+#browseWidget #browseByLetter li.last{
+	border: none;
+}
+#browseWidget #browseByLetter li.highlight{
+    background-color: #F8F8F8;
+}
+#browseWidget #browseByLetter li a {
+	padding: 13px;
+	text-decoration: none;	
+	color: #535353;
+}
+#searchWidget {
+    margin: 20px 0 10px;	
+    width: 915px;
+}
+#searchWidget .searchWidgetInput {
+	display: block;
+	float: left;
+	margin: 0;
+	width: 305px;
+}
+#searchWidget .searchWidgetInput label {
+	display: block;
+	font-weight: bold;
+	margin: 0;
+	padding: 0 20px 5px 0;
+	
+}
+#searchWidget #searchSubmit.searchWidgetInput {
+	clear: both;
+	display: block;
+	float: none;
+	margin: 0 0 50px;
+	padding-top: 10px;
+}
+
+input#nameField {
+    width: 275px;    
+}
+select#locationField {
+	width: 275px;
+}
+select#deptField {
+	width: 305px;
+}
+
+select#deptField option.topLevelDepartmentDropdownValue
+{
+    font-weight:bold;
+}
+select#deptField option.lowerLevelDepartmentDropdownValue
+{
+    padding-left: 7px;
+}
+
+
+
+
+#results {
+	margin: 50px 0;
+}
+#results div.toggleBlindEffect {
+	margin: 0px;
+}
+#results {
+	width: 100%;
+	margin: 20px 0;
+	border-top: 1px solid #DEDEDE;	
+}
+#results .result {
+	position: relative;
+	border-bottom: 1px solid #535353;
+}
+#results .odd {
+    background: url("../images/directory_alphabet_bg.gif") repeat-x scroll 0 0 #F4F5F7;
+    background-color: #F9F9F9 !important;
+    border-bottom: 1px solid #DEDEDE;
+    border-left: 1px solid #DEDEDE;
+    border-right: 1px solid #DEDEDE;
+}
+#results .even {
+    background-color: #F9F9F9 !important;
+    border-bottom: 1px solid #DEDEDE;
+    border-left: 1px solid #DEDEDE;
+    border-right: 1px solid #DEDEDE;
+}
+#results .result-summary {
+    height: 21px;
+    width: 100%;
+}
+#results .result span.name,
+#results .result span.phone,
+#results .result span.email {
+	display: block;
+	overflow-x: hidden;
+	margin: 3px
+}
+#results .result span.name {
+	float: left;
+	width: 38%;
+}
+#results .result span.phone {
+	float: left;
+	width: 30%;
+}
+#results .result span.email {
+	float: left;
+    width: 30%;
+}
+#results .result .result-extra {
+	height: 130px;
+	margin: 0;
+	padding: 0;
+}
+#results .extra-item {
+	position: relative;
+	top: -120px;
+	left: 100px;
+	margin-top: 5px;
+	height: 16px;
+}
+#results .extra-item span {
+	display: inline;
+}
+#results .extra-item .label {
+	font-weight: bold;
+}
+
+#results img.portrait {
+	margin: 10px;
+}
+
+
+/****************************************/
+/************ View Homepage *************/
+/****************************************/
+
+#sidebar #portrait {
+	text-align: center
+}
+
+#info-name {
+	margin-bottom: 25px;
+}
+
+#info .info-item {
+	margin-bottom: 25px;
+}
+
+#info .info-item .label {
+	display: block;
+	color: #1A2830;
+    font-size: 12px;
+    font-weight: bold;
+}
+#info .info-item .content {
+    display: block;
+    margin-left: 3px;
+}
+
+#links {
+	margin-bottom: 15px;
+}
+#links .personal-link {
+	display: block;
+	margin-left: 3px;
+	height: 17px;
+}
+
+/****************************************/
+/************ Edit Homepage *************/
+/****************************************/
+
+
+#main p.submit {
+	text-align: right;
+	margin: 25px 50px 25px 50px;
+}
+
+
+.ajax,
+.ajax:visited {
+	color: #1F5D85;
+	font-style: italic;
+}
+#portrait a {
+	display: block;
+}
+.dialog {
+	display: none;
+	background: #FFFFFF;
+	border: 2px solid #1A2830;
+	z-index: 100;
+	position: absolute;
+	right: 10px;
+	padding: 15px;
+	text-align: left;
+}
+.dialog p.submit {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.dialog .dialog-item {
+	clear: both;
+}
+.dialog .label {
+	float: left;
+	display: block;
+	width: 40px;
+	margin-top: 6px;
+}
+#add-new-link-dialog {
+	width: 350px;
+}
+#add-new-link-dialog input[type="text"] {
+	width: 300px;
+}
+#upload-portrait-dialog {
+	width: 300px;
+}
+#upload-portrait-dialog #portrait-upload {
+	margin-bottom: 5px;
+}
+
+#links .ui-state-highlight {
+	display: block;
+	height: 17px;
+	width: 100%;
+	background-color: #F5F4B8;
+}
+#links.ui-sortable .personal-link {
+	cursor: move;
+}
+
+
+
+/****************************************/
+/************* Login Page ***************/
+/****************************************/
+
+#login {
+	width: 600px;
+	margin: 0 auto;
+}
+
+#login form {
+	background-color: #EEEEEE;
+	border: 1px solid #999999;
+	padding: 20px 50px;
+}
+
+#login p {
+	clear: both;
+}
+#login #username-field label,
+#login #password-field label {
+	float: left;
+	width: 75px;
+}
+#login #username-field input,
+#login #password-field input {
+	margin-top: 5px;
+	width: 200px;
+}
+
+
+
+
+

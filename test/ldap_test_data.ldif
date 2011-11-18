@@ -1,0 +1,1904 @@
+
+version: 1
+
+dn: ou=UserAccounts,dc=library,dc=tamu,dc=edu
+objectclass: top
+objectclass: organizationalUnit
+ou: UserAccounts
+
+dn: OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Digital Initiatives
+name: Digital Initiatives
+
+dn: OU=Tokera Systems,OU=Digital Initiatives,OU=UserAccounts,DC=library,D
+ C=tamu,DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Tokera Systems
+name: Tokera Systems
+
+dn: CN=Clipper Chipper,OU=Tokera Systems,OU=Digital Initiatives,OU=UserAc
+ counts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Clipper Chipper
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Tokera Systems
+description: Enterprise Operations Manager
+displayName: Clipper Chipper
+eduPersonAffiliation: Staff
+givenName: Clipper
+mail: clipper@library.uni.edu
+name: Clipper Chipper
+physicalDeliveryOfficeName: 2.503K
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: 5000
+sn: clipper
+st: TX
+telephoneNumber: 949.822.4959
+title: Senior Analyst 3
+uid: clipper
+sAMAccountName: clipper
+eduPersonNickname: Chipper
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Roger Rabbit,OU=Tokera Systems,OU=Digital Initiatives,OU=UserAcc
+ ounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Roger Rabbit
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Tokera Systems
+displayName: Roger Rabbit
+eduPersonAffiliation: Associate Professor
+givenName: Roger
+mail: rabbit@library.uni.edu
+name: Roger Rabbit
+physicalDeliveryOfficeName: 351E
+postalAddress: WCL
+postalCode: 77843
+postOfficeBox: 5000
+sn: Rabbit
+st: TX
+telephoneNumber: 969.832.4374
+title: Head of Tokera Systems
+uid: rrabbit
+sAMAccountName: rrabbit
+eduPersonNickname: Roger
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Tokera Systems,OU=Tokera Systems,OU=Digital Initiatives,OU=User
+ Accounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Tokera Systems
+displayName: Tokera Systems
+mail: TokeraSystems@library.uni.edu
+name: Tokera Systems
+sAMAccountName: Tokera Systems
+
+dn: CN=Tokera Systems - Faculty,OU=Tokera Systems,OU=Digital Initiativ
+ es,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Tokera Systems - Faculty
+displayName: Tokera Systems - Faculty
+mail: TokeraSystems-Faculty@library.uni.edu
+name: Tokera Systems - Faculty
+sAMAccountName: Tokera Systems - Faculty
+
+dn: CN=Tokera Systems - Staff,OU=Tokera Systems,OU=Digital Initiatives
+ ,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Tokera Systems - Staff
+displayName: Tokera Systems - Staff
+mail: TokeraSystems-Staff@library.uni.edu
+name: Tokera Systems - Staff
+sAMAccountName: Tokera Systems - Staff
+
+dn: CN=Tokera Systems - Students,OU=Tokera Systems,OU=Digital Initiati
+ ves,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Tokera Systems - Students
+displayName: Tokera Systems - Students
+mail: TokeraSystems-Students@library.uni.edu
+name: Tokera Systems - Students
+sAMAccountName: Tokera Systems - Students
+
+dn: CN=Elvis Presley,OU=Tokera Systems,OU=Digital Initiatives,OU=UserAccou
+ nts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Charlie Yang
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Tokera Systems
+description: Student Worker
+displayName: Elvis Presley
+eduPersonAffiliation: Student Worker
+givenName: Elvis
+mail: elvis@uni.edu
+name: Elvis Presley
+postalAddress: Annex
+sn: Presley
+telephoneNumber: 969.822.4231
+title: Student Worker
+sAMAccountName: elvis
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Ron Paul,OU=Tokera Systems,OU=Digital Initiatives,OU=UserAccou
+ nts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Ron Paul
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Tokera Systems
+description: Student Worker
+displayName: Ron Paul
+eduPersonAffiliation: Student Worker
+givenName: Ron
+name: Ron Paul
+sn: Paul
+title: Student Worker
+sAMAccountName: paul
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Barak Obama,OU=Tokera Systems,OU=Digital Initiatives,
+ OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Barak Obama
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Tokera Systems
+displayName: Barak Obama
+eduPersonAffiliation: Graduate Student
+givenName: Barak
+mail: obama@library.uni.edu
+name: Barak Obama
+physicalDeliveryOfficeName: 6.541A
+postalAddress: Annex
+postalCode: 77840
+postOfficeBox: 5000
+sn: Obama
+st: Texas
+telephoneNumber: 845.0052
+title: Assistant Investigator
+sAMAccountName: ice
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: OU=Research and Technology,OU=Digital Initiatives,OU=UserAccounts,DC=lib
+ rary,DC=tamu,DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Research and Technology
+name: Research and Technology
+
+dn: CN=Research and Technology - Faculty,OU=Research and Technology,OU=Digit
+ al Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Research and Technology - Faculty
+displayName: Research and Technology - Faculty
+name: Research and Technology - Faculty
+sAMAccountName: Research and Technology - Faculty
+
+dn: CN=Research and Technology - Staff,OU=Research and Technology,OU=Digital
+  Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Research and Technology - Staff
+displayName: Research and Technology - Staff
+mail: ResearchandTechnology-Staff@library.uni.edu
+name: Research and Technology - Staff
+sAMAccountName: Research and Technology - Staff
+
+dn: CN=Research and Technology - Students,OU=Research and Technology,OU=Digi
+ tal Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Research and Technology - Students
+displayName: Research and Technology - Students
+name: Research and Technology - Students
+sAMAccountName: Research and Technology - Students
+
+dn: CN=Research and Technology,OU=Research and Technology,OU=Digital Initiat
+ ives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Research and Technology
+displayName: Research and Technology
+mail: ResearchandTechnology@library.uni.edu
+name: Research and Technology
+sAMAccountName: Research and Technology
+
+dn: OU=Web Services,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tam
+ u,DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Web Services
+name: Web Services
+
+dn: CN=Web Services,OU=Web Services,OU=Digital Initiatives,OU=UserAccounts,D
+ C=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Web Services
+displayName: Web Services
+mail: WebServices@library.uni.edu
+name: Web Services
+
+dn: CN=Web Services - Faculty,OU=Web Services,OU=Digital Initiatives,OU=User
+ Accounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Web Services - Faculty
+displayName: Web Services - Faculty
+mail: WebServices-Faculty@library.uni.edu
+name: Web Services - Faculty
+
+dn: CN=Web Services - Students,OU=Web Services,OU=Digital Initiatives,OU=Use
+ rAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Web Services - Students
+displayName: Web Services - Students
+mail: WebServices-Students@library.uni.edu
+name: Web Services - Students
+
+dn: CN=Web Services - Staff,OU=Web Services,OU=Digital Initiatives,OU=UserAc
+ counts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Web Services - Staff
+displayName: Web Services - Staff
+mail: WebServices-Staff@library.uni.edu
+name: Web Services - Staff
+
+dn: CN=Vladimir Putin,OU=Web Services,OU=Digital Initiatives,OU=UserAccounts,
+ DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Vladimir Putin
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Web Services
+displayName: Vladamir Putin
+eduPersonAffiliation: Staff
+givenName: Vladimir
+mail: putin@library.uni.edu
+name: Vladimir Putin
+physicalDeliveryOfficeName: Tokera, Annex 9.134D
+postalAddress: Evans
+postalCode: 77843
+postOfficeBox: TAMU 5000
+sn: Putin
+st: Texas
+telephoneNumber: 969.862.7941
+title: Experience Designer
+uid: putput
+sAMAccountName: putput
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Boris Yeltsin,OU=Web Services,OU=Digital Initiatives,OU=UserAccounts
+ ,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Boris Yeltsin
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Web Services
+displayName: Boris Yeltsin
+eduPersonAffiliation: Staff
+givenName: Boris
+name: Boris Yeltsin
+physicalDeliveryOfficeName: Annex 2.951
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: 5000
+sn: Yeltsin
+st: TX
+telephoneNumber: 969.128.5886
+title: Experience Designer
+uid: boris
+sAMAccountName: boris
+eduPersonNickname: Boris
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=James Gossling,OU=Web Services,OU=Digital Initiatives,OU=UserAccoun
+ ts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: James Gossling
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Web Services
+displayName: James Gossling
+eduPersonAffiliation: Assistant Professor
+givenName: James
+mail: gossling@library.uni.edu
+name: James Gossling
+physicalDeliveryOfficeName: 8.296
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: 5000
+sn: Gossling
+st: TX
+telephoneNumber: 929.845.0001
+title: Digital Experience Designer
+sAMAccountName: gossling
+eduPersonNickname: Jimmy
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: OU=Web Systems,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tamu
+ ,DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Web Systems
+name: Web Systems
+
+dn: CN=Web Systems,OU=Web Systems,OU=Digital Initiatives,OU=UserAccounts,DC=
+ library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Web Systems
+displayName: Web Systems
+mail: WebSystems@library.uni.edu
+name: Web Systems
+
+dn: CN=Web Systems - Faculty,OU=Web Systems,OU=Digital Initiatives,OU=UserAc
+ counts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Web Systems - Faculty
+displayName: Web Systems - Faculty
+mail: WebSystems-Faculty@library.uni.edu
+name: Web Systems - Faculty
+
+dn: CN=Web Systems - Staff,OU=Web Systems,OU=Digital Initiatives,OU=UserAcco
+ unts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Web Systems - Staff
+displayName: Web Systems - Staff
+mail: WebSystems-Staff@library.uni.edu
+name: Web Systems - Staff
+
+dn: CN=Web Systems - Students,OU=Web Systems,OU=Digital Initiatives,OU=UserA
+ ccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Web Systems - Students
+displayName: Web Systems - Students
+mail: WebSystems-Students@library.uni.edu
+name: Web Systems - Students
+
+dn: OU=Systems and Networking,OU=Digital Initiatives,OU=UserAccounts,DC=libr
+ ary,DC=tamu,DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Systems and Networking
+name: Systems and Networking
+
+dn: CN=Systems and Networking - Faculty,OU=Systems and Networking,OU=Digital
+  Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Systems and Networking - Faculty
+displayName: Systems and Networking - Faculty
+name: Systems and Networking - Faculty
+
+dn: CN=Jane Fonda,OU=Systems and Networking,OU=Digital Initiatives,OU=UserAc
+ counts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Jane Fonda
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Systems and Networking
+displayName: Jane Fonda
+eduPersonAffiliation: Staff
+givenName: Jane
+name: Jane Fonda
+physicalDeliveryOfficeName: 1.212B
+postalAddress: Evans
+postalCode: 77843
+postOfficeBox: TAMU 5000
+sn: Fonda
+st: Texas
+telephoneNumber: 969.458.5230
+title: Lead Admin
+uid: janefonda
+sAMAccountName: janefonda
+eduPersonNickname: Jane
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Systems and Networking - Staff,OU=Systems and Networking,OU=Digital I
+ nitiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Systems and Networking - Staff
+displayName: Systems and Networking - Staff
+name: Systems and Networking - Staff
+
+dn: CN=Systems and Networking - Students,OU=Systems and Networking,OU=Digita
+ l Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Systems and Networking - Students
+displayName: Systems and Networking - Students
+name: Systems and Networking - Students
+
+dn: CN=Systems and Networking,OU=Systems and Networking,OU=Digital Initiativ
+ es,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Systems and Networking
+displayName: Systems and Networking
+name: Systems and Networking
+
+dn: CN=EzProxy Admins,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=t
+ amu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: EzProxy Admins
+name: EzProxy Admins
+
+dn: CN=Rosa Parks,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=
+ tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Clarissa Schwab
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Digital Initiatives
+description: Student Worker
+displayName: Rosa Parks
+givenName: Rosa
+name: Rosa Parks
+sn: Parks
+title: Student Worker
+sAMAccountName: rosa_parks
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=DI Staff,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC
+ =edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: DI Staff
+name: DI Staff
+
+dn: OU=Applications,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tam
+ u,DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Applications
+name: Applications
+
+dn: CN=Natalie Portman,OU=Applications,OU=Digital Initiatives,OU=UserAccounts
+ ,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Natalie Portman
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Applications
+displayName: Natalie Portman
+eduPersonAffiliation: Staff
+givenName: Natalie
+mail: natalie@library.uni.edu
+name: Natalie Portman
+physicalDeliveryOfficeName: 783.B
+postalAddress: Annex
+postalCode: 77843-5001
+postOfficeBox: 5001
+sn: Portman
+st: Texas
+telephoneNumber: 919.845.9933
+title: Senior Expert
+uid: natalie
+sAMAccountName: natalie
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Lucy Lu,OU=Applications,OU=Digital Initiatives,OU=UserAccoun
+ ts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Lucy Lu
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Applications
+displayName: Lucy Lu
+eduPersonAffiliation: Staff
+givenName: Steven
+name: Lucy Lu
+physicalDeliveryOfficeName: 9.622
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: 5000
+sn: Lu
+st: Texas
+telephoneNumber: 979.458.5777
+title: Senior Organizer
+sAMAccountName: lu
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Applications - Staff,OU=Applications,OU=Digital Initiatives,OU=UserAc
+ counts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Applications - Staff
+displayName: Applications - Staff
+mail: Applications-Staff@library.uni.edu
+name: Applications - Staff
+
+dn: CN=Applications - Faculty,OU=Applications,OU=Digital Initiatives,OU=User
+ Accounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Applications - Faculty
+displayName: Applications - Faculty
+mail: Applications-Faculty@library.uni.edu
+name: Applications - Faculty
+
+dn: CN=Applications - Students,OU=Applications,OU=Digital Initiatives,OU=Use
+ rAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Applications - Students
+displayName: Applications - Students
+mail: Applications-Students@library.uni.edu
+name: Applications - Students
+
+dn: CN=Applications,OU=Applications,OU=Digital Initiatives,OU=UserAccounts,D
+ C=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Applications
+displayName: Applications
+mail: Applications@library.uni.edu
+name: Applications
+
+dn: OU=Applications Development,OU=Applications,OU=Digital Initiatives,OU=Us
+ erAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Applications Development
+name: Applications Development
+
+dn: CN=Applications Development,OU=Applications Development,OU=Applications,
+ OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Applications Development
+displayName: Applications Development
+mail: ApplicationsDevelopment@library.uni.edu
+name: Applications Development
+
+dn: CN=Applications Development - Staff,OU=Applications Development,OU=Appli
+ cations,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Applications Development - Staff
+displayName: Applications Development - Staff
+mail: ApplicationsDevelopment-Staff@library.uni.edu
+name: Applications Development - Staff
+
+dn: CN=Applications Development - Students,OU=Applications Development,OU=Ap
+ plications,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Applications Development - Students
+displayName: Applications Development - Students
+mail: ApplicationsDevelopment-Students@library.uni.edu
+name: Applications Development - Students
+
+dn: CN=Applications Development - Faculty,OU=Applications Development,OU=App
+ lications,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Applications Development - Faculty
+displayName: Applications Development - Faculty
+mail: ApplicationsDevelopment-Faculty@library.uni.edu
+name: Applications Development - Faculty
+
+dn: CN=Jack Daniels,OU=Applications Development,OU=Applications,OU=Digital
+  Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Jack Daniels
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Applications Development
+displayName: Jack Daniels
+eduPersonAffiliation: Staff
+givenName: Jack
+mail: jack@uni.edu
+name: Jack Daniels
+physicalDeliveryOfficeName: 3.722
+postalAddress: Evans
+postalCode: 77843
+postOfficeBox: 5000 TAMU
+sn: Daniels
+st: Tx.
+telephoneNumber: 979.458.7234
+title: Program Coordinator
+uid: aggiejack
+sAMAccountName: aggiejack
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Phillip Glass,OU=Applications Development,OU=Applications,OU=Digital 
+ Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Phillip Glass
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Applications Development
+displayName: Phillip Glass
+eduPersonAffiliation: Staff
+givenName: Phillip
+mail: ak_glass@library.uni.edu
+ edu
+name: Phillip Glass
+physicalDeliveryOfficeName: 3.612
+postalAddress: Evans
+postalCode: 77843
+postOfficeBox: 5000 TAMU
+sn: Glass
+st: Tx.
+telephoneNumber: 979.458.0032
+title: Lead Developer
+uid: ak_glass
+sAMAccountName: ak_glass
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Jack Bower,OU=Applications Development,OU=Applications,OU=Digital
+  Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Jack Bower
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Applications Development
+displayName: Jack Bower
+eduPersonAffiliation: Staff
+givenName: Jack
+name: Jack Bower
+physicalDeliveryOfficeName: 3.109E
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: 5000
+sn: Liles
+st: TX
+telephoneNumber: 979.458.3216
+title: Lead Developer
+uid: jackbower
+sAMAccountName: jackbower
+eduPersonNickname: Jack
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Lee Adama,OU=Applications Development,OU=Applications,OU=Digital In
+ itiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Lee Adama
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Applications Development
+displayName: Lee Adama
+eduPersonAffiliation: Staff
+givenName: Lee
+mail: aleel@library.uni.edu
+ edu
+name: Lee Adama
+physicalDeliveryOfficeName: 2.752
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: 5000
+sn: Adama
+st: TX
+telephoneNumber: 979.458.1234, extension 1234
+title: Developer
+uid: alee
+sAMAccountName: alee
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: OU=Applications Services,OU=Applications,OU=Digital Initiatives,OU=UserA
+ ccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Applications Services
+name: Applications Services
+
+dn: CN=Sul Tigh,OU=Applications Services,OU=Applications,OU=Digital Init
+ iatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Sul Tigh
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Applications Services
+description: Description Field
+displayName: Sul Tigh
+eduPersonAffiliation: Staff
+givenName: Sul
+mail: stigh@library.uni.edu
+name: Sul Tigh
+physicalDeliveryOfficeName: 3.123
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: MS 5000
+sn: Tigh
+st: TX
+streetAddress: Evans Library
+telephoneNumber: 979.458.1234
+title: Lead Developer
+uid: stigh
+sAMAccountName: stigh
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=John Picard,OU=Applications Services,OU=Applications,OU=Digital Ini
+ tiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: John Picard
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Applications Services
+displayName: John Picard
+eduPersonAffiliation: Staff
+givenName: John
+mail: kryptyk@library.uni.edu
+name: John Picard
+physicalDeliveryOfficeName: Annex 945
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: 5000
+sn: Picard
+st: Texas
+streetAddress: 5000 tamu
+telephoneNumber: 979.458.1234
+title: Software Developer
+uid: kryptyk
+sAMAccountName: kryptyk
+eduPersonNickname: Johnny
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Gauis Baltar,OU=Applications Services,OU=Applications,OU=Digital I
+ nitiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Gauis Baltar
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Applications Services
+displayName: Gauis Baltar
+eduPersonAffiliation: Staff
+givenName: Gauis
+mail: g-baltar@library.uni.edu
+name: Gauis Baltar
+physicalDeliveryOfficeName: 637
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: 5000
+sn: Baltar
+st: TX
+telephoneNumber: 979.458.1234
+title: Expert of Many Things
+sAMAccountName: g-baltar
+eduPersonNickname: Guy
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Applications Services - Staff,OU=Applications Services,OU=Application
+ s,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Applications Services - Staff
+displayName: Applications Services - Staff
+mail: ApplicationsServices-Staff@library.uni.edu
+name: Applications Services - Staff
+
+dn: CN=Applications Services - Students,OU=Applications Services,OU=Applicat
+ ions,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Applications Services - Students
+displayName: Applications Services - Students
+mail: ApplicationsServices-Students@library.uni.edu
+name: Applications Services - Students
+
+dn: CN=Applications Services - Faculty,OU=Applications Services,OU=Applicati
+ ons,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Applications Services - Faculty
+displayName: Applications Services - Faculty
+mail: ApplicationsServices-Faculty@library.uni.edu
+name: Applications Services - Faculty
+
+dn: CN=Applications Services,OU=Applications Services,OU=Applications,OU=Dig
+ ital Initiatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Applications Services
+displayName: Applications Services
+mail: ApplicationsServices@library.uni.edu
+name: Applications Services
+
+dn: CN=Micheal Kay,OU=Applications Services,OU=Applications,OU=Digital Init
+ iatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Micheal Kay
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Applications Services
+displayName: Micheal Kay
+eduPersonAffiliation: Staff
+givenName: Billy
+mail: somethingcompletelydifferent@library.uni.edu
+name: Micheal Kay
+postalAddress: Annex
+sn: Kay
+title: Data Curator
+uid: else
+sAMAccountName: else
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=John Stewart,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=t
+ amu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: John Stewart
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Digital Initiatives
+description: Director, Digital Initiatives
+displayName: John Stewart
+eduPersonAffiliation: Staff
+givenName: John
+mail: john.stewart@library.uni.edu
+name: John Stewart
+physicalDeliveryOfficeName: 3.945A
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: TAMU 5000
+sn: Stewart
+st: Texas
+telephoneNumber: 979.845.1234
+title: Director
+uid: john.stewart
+sAMAccountName: john.stewart
+eduPersonNickname: Johnny
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Steven Colbert,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tam
+ u,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Steven Colbert
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Digital Initiatives
+displayName: Steven Colbert
+eduPersonAffiliation: Professor
+givenName: Steven
+mail: colbert@uni.edu
+name: Steven Colbert
+physicalDeliveryOfficeName: 2233
+postalAddress: Evans
+postalCode: 77843-5000
+postOfficeBox: MS 5000
+sn: Colbert
+st: TX
+telephoneNumber: 979.458.1234
+title: Dean for Technology
+uid: colbert
+sAMAccountName: colbert
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Digital Initiatives - Faculty,OU=Digital Initiatives,OU=UserAccounts,
+ DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Digital Initiatives - Faculty
+displayName: Digital Initiatives - Faculty
+mail: DigitalInitiatives-Faculty@library.uni.edu
+name: Digital Initiatives - Faculty
+
+dn: CN=Digital Initiatives - Staff,OU=Digital Initiatives,OU=UserAccounts,DC
+ =library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Digital Initiatives - Staff
+displayName: Digital Initiatives - Staff
+mail: DigitalInitiatives-Staff@library.uni.edu
+name: Digital Initiatives - Staff
+
+dn: CN=Digital Initiatives - Students,OU=Digital Initiatives,OU=UserAccounts
+ ,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Digital Initiatives - Students
+displayName: Digital Initiatives - Students
+mail: DigitalInitiatives-Students@library.uni.edu
+name: Digital Initiatives - Students
+
+dn: CN=DI Managers,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tamu
+ ,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: DI Managers
+displayName: DI Managers
+mail: DIManagers@library.uni.edu
+name: DI Managers
+
+dn: CN=Steven Carell,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tam
+ u,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Steven Carell
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Digital Initiatives
+description: Administrative Assistant
+displayName: Steven Carell
+eduPersonAffiliation: Staff
+givenName: Steven
+mail: scarell@library.uni.edu
+name: Steven Carell
+physicalDeliveryOfficeName: 3.123C
+postalAddress: Evans
+postalCode: 77843-5000
+postOfficeBox: 5000
+sn: Carell
+st:: VFgg
+streetAddress: 5000 TAMU Libraries
+telephoneNumber: +974 (4) 423 1234 (Qatar)
+title: Assistant
+sAMAccountName: scarell
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Digital Initiatives,OU=Digital Initiatives,OU=UserAccounts,DC=library
+ ,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Digital Initiatives
+displayName: Digital Initiatives
+mail: DigitalInitiatives@library.uni.edu
+name: Digital Initiatives
+
+dn: OU=Operations,OU=Digital Initiatives,OU=UserAccounts,DC=library,DC=tamu,
+ DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Operations
+name: Operations
+
+dn: OU=Windows,OU=Operations,OU=Digital Initiatives,OU=UserAccounts,DC=libra
+ ry,DC=tamu,DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Windows
+name: Windows
+
+dn: CN=Windows,OU=Windows,OU=Operations,OU=Digital Initiatives,OU=UserAccoun
+ ts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Windows
+displayName: Windows
+mail: Windows@library.uni.edu
+name: Windows
+
+dn: CN=Windows - Staff,OU=Windows,OU=Operations,OU=Digital Initiatives,OU=Us
+ erAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Windows - Staff
+displayName: Windows - Staff
+mail: Windows-Staff@library.uni.edu
+name: Windows - Staff
+
+dn: CN=Windows - Faculty,OU=Windows,OU=Operations,OU=Digital Initiatives,OU=
+ UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Windows - Faculty
+displayName: Windows - Faculty
+mail: Windows-Faculty@library.uni.edu
+name: Windows - Faculty
+
+dn: CN=Windows - Students,OU=Windows,OU=Operations,OU=Digital Initiatives,OU
+ =UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Windows - Students
+displayName: Windows - Students
+mail: Windows-Students@library.uni.edu
+name: Windows - Students
+
+dn: CN=Micheal Moore,OU=Windows,OU=Operations,OU=Digital Initiatives,OU=User
+ Accounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Micheal Moore
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Windows
+displayName: Micheal Moore
+eduPersonAffiliation: Staff
+givenName: Micheal
+name: Micheal Moore
+physicalDeliveryOfficeName: 3.123
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: MS 5000
+sn: Moore
+st: TX
+telephoneNumber: 979.458.123
+title: Systems Curator
+uid: mmore
+sAMAccountName: mmore
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Julia Roberts,OU=Windows,OU=Operations,OU=Digital Initiatives,OU=Us
+ erAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Julia Roberts
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Windows
+displayName: Julia Roberts
+eduPersonAffiliation: Staff
+givenName: Julia
+mail: jroberts@library.uni.edu
+name: Julia Roberts
+physicalDeliveryOfficeName: 733
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: 5000
+sn: Roberts
+st: TX
+telephoneNumber: 979.458.1234
+title: Lead Systems Administrator
+uid: jroberts
+sAMAccountName: jroberts
+eduPersonNickname: Julie
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=George Clooney,OU=Windows,OU=Operations,OU=Digital Initiatives,OU=Us
+ erAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: George Clooney
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Windows
+displayName: George Clooney
+eduPersonAffiliation: Staff
+givenName: Terry
+mail: gclooney@library.uni.edu
+name: George Clooney
+physicalDeliveryOfficeName: 644
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: TAMU 5000
+sn: Clooney
+st: Texas
+telephoneNumber: 8.1234
+title: Specialist
+sAMAccountName: gclooney
+eduPersonNickname: George
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Brad Pitt,OU=Windows,OU=Operations,OU=Digital Initiatives,OU=User
+ Accounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Brad Pitt
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Windows
+displayName: Brad Pitt
+eduPersonAffiliation: Staff
+givenName: Israel
+mail: bpitt@library.uni.edu
+name: Brad Pitt
+physicalDeliveryOfficeName: 3.712 (Annex 6th Floor)
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: 5000
+sn: Pitt
+st: Texas
+streetAddress: LAMAR Street
+telephoneNumber: 979.458.1234
+title: Administrator
+sAMAccountName: bpitt
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Adam Sandler,OU=Windows,OU=Operations,OU=Digital Initiatives,OU=User
+ Accounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Adam Sandler
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Windows
+displayName: Adam Sandler
+eduPersonAffiliation: Staff
+givenName: Adam
+mail: AdamSandler@library.uni.edu
+name: Adam Sandler
+physicalDeliveryOfficeName: 923
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: 5000 TAMU
+sn: Sandler
+st: Tx.
+telephoneNumber: 979.458.1234
+title: Administrator
+sAMAccountName: adamsandler
+eduPersonNickname: Adam
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: OU=Open Systems,OU=Operations,OU=Digital Initiatives,OU=UserAccounts,DC=
+ library,DC=tamu,DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Open Systems
+name: Open Systems
+
+dn: CN=Open Systems,OU=Open Systems,OU=Operations,OU=Digital Initiatives,OU=
+ UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Open Systems
+displayName: Open Systems
+mail: OpenSystems@library.uni.edu
+name: Open Systems
+
+dn: CN=Open Systems - Faculty,OU=Open Systems,OU=Operations,OU=Digital Initi
+ atives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Open Systems - Faculty
+displayName: Open Systems - Faculty
+mail: OpenSystems-Faculty@library.uni.edu
+name: Open Systems - Faculty
+
+dn: CN=Open Systems - Staff,OU=Open Systems,OU=Operations,OU=Digital Initiat
+ ives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Open Systems - Staff
+displayName: Open Systems - Staff
+mail: OpenSystems-Staff@library.uni.edu
+name: Open Systems - Staff
+
+dn: CN=Open Systems - Students,OU=Open Systems,OU=Operations,OU=Digital Init
+ iatives,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Open Systems - Students
+displayName: Open Systems - Students
+mail: OpenSystems-Students@library.uni.edu
+name: Open Systems - Students
+
+dn: CN=Walt Richard Disney,OU=Open Systems,OU=Operations,OU=Digital Initiative
+ s,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Walt Richard Disney
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Open Systems
+displayName: Walt Richard Disney
+eduPersonAffiliation: Non-Faculty
+givenName: Walt Richard
+mail: wrd@library.uni.edu
+name: Walt Richard Disney
+physicalDeliveryOfficeName: 3.432
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: 5000 TAMU
+sn: Disney
+st: TX
+telephoneNumber: 979.458.1234
+title: Senior Expert
+uid: wrd
+sAMAccountName: wrd
+eduPersonNickname: Richard
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Micky Mouse,OU=Open Systems,OU=Operations,OU=Digital Initiatives
+ ,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Micky Mouse
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Open Systems
+displayName: Micky Mouse
+givenName: Micky
+mail: mouse@library.uni.edu
+name: Micky Mouse
+sn: Mouse
+uid: micky
+sAMAccountName: mouse
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU=UserAccounts,DC=lib
+ rary,DC=tamu,DC=edu
+objectClass: top
+objectClass: organizationalUnit
+objectCategory: CN=Organizational-Unit,CN=Schema,CN=Configuration,DC=library
+ ,DC=tamu,DC=edu
+ou: Help Desk
+name: Help Desk
+
+dn: CN=Help Desk,OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU=UserAc
+ counts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Help Desk
+displayName: Help Desk
+mail: HelpDesk2@library.uni.edu
+name: Help Desk
+
+dn: CN=Help Desk - Staff,OU=Help Desk,OU=Operations,OU=Digital Initiatives,O
+ U=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Help Desk - Staff
+displayName: Help Desk - Staff
+mail: HelpDesk-Staff@library.uni.edu
+name: Help Desk - Staff
+
+dn: CN=Help Desk - Faculty,OU=Help Desk,OU=Operations,OU=Digital Initiatives
+ ,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Help Desk - Faculty
+displayName: Help Desk - Faculty
+mail: HelpDesk-Faculty@library.uni.edu
+name: Help Desk - Faculty
+
+dn: CN=Help Desk - Students,OU=Help Desk,OU=Operations,OU=Digital Initiative
+ s,OU=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Help Desk - Students
+displayName: Help Desk - Students
+mail: HelpDesk-Students@library.uni.edu
+name: Help Desk - Students
+
+dn: CN=Scarlet Johanson,OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU=User
+ Accounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Marc Fuller
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Help Desk
+description: Student Worker
+displayName: Scarlet Johanson
+eduPersonAffiliation: Student Worker
+givenName: Scarlet
+mail: scar99@library.uni.edu
+name: Scarlet Johanson
+physicalDeliveryOfficeName: 235.V9
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: 5000 TAMU
+sn: Fuller
+st: TX
+telephoneNumber: 979.862.1234
+title: Student Worker
+sAMAccountName: scar99
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Johnny Dep,OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU
+ =UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Johnny Dep
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Help Desk
+description: Student Worker
+displayName: Johnny Dep
+eduPersonAffiliation: Student Worker
+givenName: Johnny
+mail: jdep@library.uni.edu
+name: Johnny Dep
+physicalDeliveryOfficeName: 2335.V9
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: 5000 TAMU
+sn: Dep
+st: TX
+telephoneNumber: 979.862.1234
+title: Student Worker
+sAMAccountName: jdep
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Adam Smith,OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU=Use
+ rAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Adam Smith
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Help Desk
+displayName: Adam Smith
+eduPersonAffiliation: Staff
+givenName: Adam
+mail: a-smith@library.uni.edu
+name: Adam Smith
+physicalDeliveryOfficeName: 1234
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: 5000
+sn: Smith
+st: TX
+streetAddress:: IA==
+telephoneNumber: 979.458.1234
+title: Senior Consultant
+sAMAccountName: a-smith
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=George Washington,OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU=Us
+ erAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: George Washington
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Help Desk
+displayName: George Washington
+eduPersonAffiliation: Staff
+givenName: George
+mail: ggorge@library.uni.edu
+name: George Washington
+physicalDeliveryOfficeName: 1234
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: 5000
+sn: Washington
+st: Texas
+telephoneNumber: 979.458.1234
+title: Specialist
+uid: ggeorge
+sAMAccountName: ggeorge
+eduPersonNickname: Steven
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Karl Marx,OU=Help Desk,OU=Operations,OU=Digital Initiatives,O
+ U=UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Karl Marx
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Help Desk
+displayName: Karl Marx
+eduPersonAffiliation: Staff
+givenName: Karl
+mail: karl@library.uni.edu
+name: Karl Marx
+physicalDeliveryOfficeName: 195
+postalAddress: MSL
+postalCode: 77843
+postOfficeBox: 5000 TAMU
+sn: Marx
+st: TX
+telephoneNumber: 979.845.1234
+title: Administrator
+sAMAccountName: karl
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Andrew Jackson,OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU=
+ UserAccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Andrew Jackson
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Operations and Client Services
+description: Student Worker
+displayName: Andrew Jackson
+eduPersonAffiliation: Student Worker
+givenName: Andrew
+name: Andrew Jackson
+physicalDeliveryOfficeName: 3rd Floor
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: TAMU 5000
+sn: Jackson
+st: Texas
+telephoneNumber: 979.862.1234
+title: Student Tech. I
+sAMAccountName: jacx359
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Lee Booth,OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU=UserA
+ ccounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Lee Booth
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Operations and Client Services
+description: Student Worker
+displayName: Lee Booth
+eduPersonAffiliation: Student Worker
+givenName: Lee
+mail: lee069@library.uni.edu
+name: Lee Booth
+physicalDeliveryOfficeName: 1234A
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: TAMU 5000
+sn: Booth
+st: Texas
+telephoneNumber: 979.862.1234
+title: Student Technician
+sAMAccountName: lee069
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Abraham Lincoln,OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU=User
+ Accounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Luis Medina
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Operations and Client Services
+description: Student Worker
+displayName: Luis Medina
+eduPersonAffiliation: Student Worker
+givenName: Abraham
+name: Abraham Lincoln
+physicalDeliveryOfficeName: 1234
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: TAMU 5000
+sn: Lincoln
+st: Texas
+telephoneNumber: 979.862.1234
+title: Student Worker
+sAMAccountName: alincoln
+eduPersonNickname: Abe
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=George Bush,OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU=User
+ Accounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: George Bush
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Operations and Client Services
+description: Student Worker
+displayName: George Bush
+eduPersonAffiliation: Student Worker
+givenName: Dexter
+mail: thoeu155@library.uni.edu
+name: George Bush
+physicalDeliveryOfficeName: 1234
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: TAMU 5000
+sn: Bush
+st: Texas
+telephoneNumber: 979.862.1234
+title: Student Tech. I
+sAMAccountName: thoeu155
+eduPersonNickname: Bush
+userAccountControl: 514
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Thomas Jefferson,OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU=User
+ Accounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Thomas Jefferson
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Help Desk
+description: Student Worker
+displayName: Thomas Jefferson
+eduPersonAffiliation: Student Worker
+givenName: Thomas
+mail: abcrt3343@library.uni.edu
+name: Thomas Jefferson
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: TAMU 5000
+sn: Jefferson
+st: Texas
+telephoneNumber: 979.862.1234 ext. 5
+title: Student Worker
+sAMAccountName: abcrt3462
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Bill Clinton,OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU=User
+ Accounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Bill Clinton
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Help Desk
+description: Student Worker
+displayName: Bill Clinton
+eduPersonAffiliation: Student Worker
+givenName: Bill
+mail: billyclinton@library.uni.edu
+name: Bill Clinton
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: 5000 TAMU
+sn: Clinton
+st: TX
+telephoneNumber: 979.862.1234
+title: Student Worker
+sAMAccountName: billyclinton
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Ronald Reagan,OU=Operations,OU=Digital Initiatives,OU=UserAccounts,DC
+ =library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Ronald Reagan
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Operations
+displayName: Ronald Reagan
+eduPersonAffiliation: Staff
+givenName: Ronald
+mail: r-regan@library.uni.edu
+name: Ronald Reagan
+physicalDeliveryOfficeName: 1234
+postalAddress: Annex
+postalCode: 77843-5000
+postOfficeBox: 5000
+sn: Reagan
+st: TX
+telephoneNumber: 979.862.1234
+title: Manager
+uid: rregan
+sAMAccountName: r-regan
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=
+
+dn: CN=Operations,OU=Operations,OU=Digital Initiatives,OU=UserAccounts,DC=li
+ brary,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Operations
+displayName: Operations
+mail: Operations@library.uni.edu
+name: Operations
+
+dn: CN=Operations - Staff,OU=Operations,OU=Digital Initiatives,OU=UserAccoun
+ ts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Operations - Staff
+displayName: Operations - Staff
+mail: Operations-Staff@library.uni.edu
+name: Operations - Staff
+
+dn: CN=Operations - Faculty,OU=Operations,OU=Digital Initiatives,OU=UserAcco
+ unts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Operations - Faculty
+displayName: Operations - Faculty
+mail: Operations-Faculty@library.uni.edu
+name: Operations - Faculty
+
+dn: CN=Operations - Students,OU=Operations,OU=Digital Initiatives,OU=UserAcc
+ ounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: group
+objectCategory: CN=Group,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=ed
+ u
+cn: Operations - Students
+displayName: Operations - Students
+mail: Operations-Students@library.uni.edu
+name: Operations - Students
+
+dn: CN=Sponsored Account,OU=Help Desk,OU=Operations,OU=Digital Initiatives,OU=User
+ Accounts,DC=library,DC=tamu,DC=edu
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: Sponsored Account
+objectCategory: CN=Person,CN=Schema,CN=Configuration,DC=library,DC=tamu,DC=e
+ du
+department: Help Desk
+description: Sponsored Account
+displayName: Sponsored Account
+givenName: Sponsored
+mail: Sponsored@library.uni.edu
+name: Sponsored Account
+postalAddress: Annex
+postalCode: 77843
+postOfficeBox: 5000 TAMU
+sn: Account
+st: TX
+telephoneNumber: 979.862.1234
+title: Sponsored Account
+sAMAccountName: sponsoredaccount
+userAccountControl: 512
+userPassword: {SHA}qUqP5cyxm6YcTAhz05Hph5gvu9M=

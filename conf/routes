@@ -1,0 +1,39 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Publicly accessible pages
+GET     /                                       Public.index
+GET     /browse/{<[A-Z]>letter}                 Public.browse
+POST	/search									Public.search
+GET		/people/{netid}							Public.viewPage
+
+
+# Authentication
+GET     /login                                  Secure.login
+POST    /login                                  Secure.authenticate
+GET     /logout                                 Secure.logout
+
+
+# Admin Pages
+*       /people/{netid}/edit                    Admin.editHomepage
+PUT     /people/{netid}/links                   Admin.addLink
+POST    /people/{netid}/links                   Admin.reorderLinks
+DELETE  /people/{netid}/links                   Admin.removeLink
+
+
+# Attachments / Profile
+GET     /people/{netid}/portrait                Public.viewPortrait
+GET     /people/{netid}/{<[^/]+\.[^/]+>name}    Public.viewAttachment
+DELETE  /people/{netid}/{<[^/]+\.[^/]+>name}    Admin.removeAttachment
+
+# CKEditor specific paths
+GET     /people/{netid}/ckeditor/browse         CKEditor.browse
+POST    /people/{netid}/ckeditor/upload         CKEditor.upload
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public

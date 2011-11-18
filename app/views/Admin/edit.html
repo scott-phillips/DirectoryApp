@@ -1,0 +1,311 @@
+#{extends 'main.html' /}
+#{set title:'Edit Homepage' /}
+#{set contentClass:'two-column' /}
+#{set 'breadcrumb'}
+    <span class="breadcrumbSeparator">→</span>
+    <a href="@{Public.viewPage(user.netID)}">${user.displayName}</a>
+    <span class="breadcrumbSeparator">&#x2192;</span>
+    Edit
+#{/set}
+#{set 'moreScripts'}
+    <script src="@{'/public/javascripts/jquery-ui-1.8.16.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+    <script src="@{'/public/ckeditor/ckeditor.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+    <script type="text/javascript">
+
+CKEDITOR.editorConfig = function( config )
+{
+    
+    config.filebrowserImageBrowseUrl = '@{CKEditor.browse(user.netID)}?type=images';
+    config.filebrowserImageUploadUrl = '@{CKEditor.upload(user.netID)}?type=images';
+    config.filebrowserBrowseUrl = '@{CKEditor.browse(user.netID)}';
+    config.filebrowserUploadUrl = '@{CKEditor.upload(user.netID)}';
+    
+    config.filebrowserWindowHeight = '500px';
+    config.filebrowserWindowWidth = '500px';
+ 
+    config.language = 'en';    
+    config.toolbar = 'Library';
+    
+    config.toolbar_Library =
+        [
+            { name: 'document', items : [ 'Source','Save','Print' ] },
+            { name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
+            { name: 'editing', items : [ 'Find','Replace','-','SelectAll' ] },
+            '/',
+            { name: 'basicstyles', items : [ 'Bold','Italic','Underline','Strike','Subscript','Superscript','-','RemoveFormat' ] },
+            { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock' ] },
+            { name: 'links', items : [ 'Link','Unlink','Anchor' ] },
+            { name: 'insert', items : [ 'Image','Table','HorizontalRule','SpecialChar' ] },
+            '/',
+            { name: 'styles', items : [ 'Format','FontSize' ] },
+            { name: 'colors', items : [ 'TextColor','BGColor' ] },
+            { name: 'tools', items : [ 'Maximize','-','About' ] }
+        ];
+};
+    
+    
+function removeAttachment( attachmentid, removeUrl ) {
+	
+	if (jQuery("#attachment-"+attachmentid+" .remove").text().indexOf("remove") >= 0) {
+	    jQuery("#attachment-"+attachmentid+" .remove").text("(Are you sure?)");
+	} else {
+		jQuery.ajax({
+		    url: removeUrl,
+		    type: 'DELETE',
+		    dataType: 'json',
+		    success: function(data) {
+		    	if (data.status == "success") {
+		    		jQuery('#attachment-'+attachmentid).remove();
+		    	} else {
+		    		alert("Unable to remove attachment.");
+		    	}
+		    },
+		    error: function() {
+		    	alert("Unable to remove attachment.");
+		    }
+		});
+	}
+	
+	return false;
+} 
+
+function openUploadPortraitDialog() {
+    jQuery('#upload-portrait-dialog').css("display","block");
+    return false;
+}
+
+function closeUploadPortraitDialog() {
+    jQuery('#upload-portrait-dialog').css("display","none");
+    return false;
+}
+
+function openAddLinkDialog() {
+	jQuery('#add-new-link-dialog').css("display","block");
+	return false;
+}
+
+function closeAddLinkDialog() {
+	jQuery('#add-new-link-dialog').css("display","none");
+	return false;
+}
+
+function addLink( ) {
+	url = jQuery("#new-link-url").val();
+	label = jQuery("#new-link-label").val();
+	
+	// If the link's label is blank then do nothing.
+	if (label.length == 0)
+		return;
+	
+	jQuery.ajax({
+        url: '@{Admin.addLink(user.netID)}?label='+encodeURIComponent(label)+'&url='+encodeURIComponent(url),
+        type: 'PUT',
+        dataType: 'json',
+        success: function(data) {
+            if (data.status == "success") {
+            	id = data.id;
+            	jQuery('#links').append('<span id="link-'+id+'" class="personal-link"> &#8645; <a href="'+url+'">'+label+'</a> <a href="#" onclick="return removeLink(\''+id+'\');" class="remove ajax">(remove)</a></span>');
+            	reorderLinks();
+            	closeAddLinkDialog();
+            	jQuery("#new-link-url").val("http://");
+                jQuery("#new-link-label").val("");
+            	
+            } else {
+                alert("Unable to add new link.");
+            }
+        },
+        error: function() {
+            alert("Unable to add new link.");
+        }
+    });
+}
+
+function removeLink( linkid ) {
+	
+	if (jQuery("#link-"+linkid+" .remove").text().indexOf("remove") >= 0) {
+		jQuery("#link-"+linkid+" .remove").text("(Are you sure?)");
+	} else {
+		jQuery.ajax({
+	        url: '@{Admin.removeLink(user.netID)}?linkid='+linkid,
+	        type: 'DELETE',
+	        dataType: 'json',
+	        success: function(data) {
+	            if (data.status == "success") {
+	                jQuery('#link-'+linkid).remove();
+	                reorderLinks();
+	            } else {
+	                alert("Unable to remove link.");
+	            }
+	        },
+	        error: function() {
+	            alert("Unable to remove link.");
+	        }
+	    });
+	}
+    
+    return false;
+}
+
+function reorderLinks() {
+	// Get a list of all the ids in an orderd array.
+    var orderArray = jQuery('#links').sortable('toArray');
+
+	// If there are no links, then bail out.
+	if (orderArray.length == 0)
+		return;
+	
+    // Strip out "link-" from each id.
+    for (var i=0; i < orderArray.length; i++) {
+    	var value = orderArray[i];
+    	orderArray[i] = value.substring(5,value.length);
+    }
+    // Turn into a comma seperated list
+    var order = orderArray.toString();
+
+    // Send the order back to the server to record in the database.
+	jQuery.ajax({
+	     url: '@{Admin.removeLink(user.netID)}?order='+order,
+	     type: 'POST',
+	     dataType: 'json' //,
+	     /** We don't do anything differently if the order fails.
+	     success: function(data) {
+	         if (data.status == "success") {
+	        	 alert("Reorder Successfull");
+	         } else {
+	             alert("Reorder failed");
+	         }
+	     },
+	     error: function() {
+	         alert("Reorder connection failed");
+	     }**/
+	 });	  
+}
+
+jQuery(document).ready(function() {
+	jQuery('#links').sortable({
+		update: function(event, ui) {
+		    reorderLinks();			
+		},
+		placeholder: 'ui-state-highlight'
+	});
+})
+
+jQuery(document).click(function(event) {
+	if ( jQuery(event.target).closest('.remove').length === 0)
+		   jQuery('.remove').text("(remove)");
+	if ( jQuery(event.target).closest('#portrait').length === 0)
+		   closeUploadPortraitDialog();
+	if ( jQuery(event.target).closest('#add-new-links').length === 0)
+		closeAddLinkDialog();
+		
+});
+
+
+    </script>
+#{/set}
+
+<form action="@{Admin.editHomepage(user.netID)}" enctype="multipart/form-data" method="POST">
+
+
+<div id="main">
+
+    #{if flash.error}
+        <p class="error">
+            &{flash.error}
+        </p>
+    #{/if}
+    #{if flash.success}
+        <p class="success">
+            &{flash.success}
+        </p>
+    #{/if}
+
+	<h2>${user.displayName} #{if !page?.content_published } &#151; unpublished #{/if}</h2>
+	<textarea name="content" class="ckeditor">${page?.content}</textarea>
+	<p id="content-publish"><input type="checkbox" name="content_published" value="true" #{if page?.content_published }checked="true"#{/if}> Publish homepage publicly?</p>
+	<p class="submit"><input type="submit" name="submit" value="Save Page"/></p>
+	
+	<h3>File Attachments</h3>
+	<p>Upload file attachments such as your CV, Resume, or other files you wish to provide from your library directory page. Use the links provided below to reference the files within your page, or add them to the links on the right hand side of the page.</p>
+	
+	#{if page?.getAttachments()?.size() > 0}
+	<ul>
+	#{list items:page?.getAttachments(), as:'attachment'}
+	    <li id="attachment-${ attachment.id }"> 
+	        <a href="@{Public.viewAttachment(user.netID,attachment.name)}">${ baseAttachmentURL }@{Public.viewAttachment(user.netID,attachment.name)}</a>
+	        <a href="#" onclick="return removeAttachment('${ attachment.id }','@{Public.viewAttachment(user.netID,attachment.name)}');" class="remove ajax">(remove)</a>
+	    </li>
+	#{/list}
+	</ul>
+	#{/if}
+	<p>Upload: <input type="file" name="uploadAttachment"/><input type="submit" name="submit" value="Upload File"/></p>
+</div><!-- #main -->
+
+
+<div id="sidebar">
+    <div id="portrait">
+        #{if page?.portrait?.exists() }
+            <img src="@{Public.viewPortrait(user.netID)}" alt="${user.displayName} portrait" width="105" height="140" class="portrait"/>
+        #{/if}
+        #{else}
+            <img src="@{'/public/images/evans.jpeg'}" alt="${user.displayName} portrait" width="105" height="140" class="portrait"/>
+        #{/else}
+        <a href="#" onclick="return openUploadPortraitDialog();" class="ajax">(Edit #{if !page?.portrait_published } unpublished #{/if} portrait)</a>
+        <div id="upload-portrait-dialog" class="dialog">
+            <h4>Upload new portrait image:</h4>
+            <p> We recommend using an image that is <kbd>105 x 140</kbd> pixels for best results.</p>
+            <p id="portrait-upload"><input type="file" name="uploadPortrait"/></p>
+            <p id="portrait-publish"><input type="checkbox" name="portrait_published" value="true" #{if page?.portrait_published }checked="true"#{/if}> Publish portrait publicly?</p>
+            <p class="submit"><input type="submit" name="submit" value="Update Portrait"/><input type="button" name="Cancel" value="Cancel" onclick="closeUploadPortraitDialog();"/></p>
+        </div>
+    </div>
+    <h2 id="info-name">${user.displayName}</h2>
+    <div id="info">
+        <div class="info-item">
+            <span class="label">Title</span> 
+            <span class="content">${user.title}</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Position</span> 
+            <span class="content">${user.position}</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Department</span> 
+            <span class="content">${user.department}</span>
+        </div>
+        <div class="info-item">
+            <span class="label">Contact Information</span> 
+            <span class="content">${user.building}, ${user.office}</span>
+            <span class="content">${user.phone}</span>
+            <span class="content"><a href="mailto: ${user.email}">${user.email}</a></span>
+        </div>
+    </div>
+	<h3>Links</h3>
+	<div id="links">
+		#{if page?.getLinks()?.size() > 0}
+		    #{list items:page?.getLinks(), as:'link'}
+	                  <span id="link-${ link.id }" class="personal-link"> &#8645;
+	                  	  <a href="${ link.url }" target="_blank">${ link.label }</a>
+	                      <a href="#" onclick="return removeLink('${ link.id }');" class="remove ajax">(remove)</a>
+	                  </span>
+		    #{/list}
+		#{/if}
+	</div>
+	<div id="add-new-links">
+	    <a href="#" onclick="return openAddLinkDialog();" class="ajax" >(Add a new link)</a>
+		<div id="add-new-link-dialog" class="dialog">
+		    <h4>Add a new link:</h4>
+		    <p>Provide both the complete URL and displayable label that readers will click on in the fields below.</p>
+		    <div class="dialog-item">
+		  	   <span class="label">URL:</span> <input type="text" name="new-link-url" id="new-link-url" value="http://"/>
+		  	</div>
+		  	<div class="dialog-item">
+			   <span class="label">Label:</span> <input type="text" name="new-link-label" id="new-link-label" value=""/>
+			</div>
+			<p class="submit"><input type="button" name="add-link" value="Add Link" onclick="addLink();"/><input type="button" name="Cancel" value="Cancel" onclick="closeAddLinkDialog();"/></p>
+		</div>
+	</div>
+
+</div><!-- #sidebar -->
+</form>
+

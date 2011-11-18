@@ -1,0 +1,53 @@
+#{extends 'main.html' /}
+#{set 'title'}${person.displayName}#{/set}
+#{set contentClass:'two-column' /}
+#{set 'breadcrumb'}
+	<span class="breadcrumbSeparator">&#x2192;</span>
+	<a href="@{Public.viewPage(person.netID)}">${person.displayName}</a>	
+#{/set}
+
+<div id="main">
+    <h1>${person.firstName} ${person.lastName}</h1>
+    <div id="wysiwyg-content">#{verbatim}${page.getContent()}#{/verbatim}</div>
+</div>
+<div id="sidebar">
+	<div id="portrait">
+		#{if page?.portrait?.exists() && page?.portrait_published }
+            <img src="@{Public.viewPortrait(person.netID)}" alt="${person.displayName} portrait" width="105" height="140" class="portrait"/>
+        #{/if}
+        #{else}
+            <img src="@{'/public/images/evans.jpeg'}" alt="${person.displayName} portrait" width="105" height="140" class="portrait"/>
+        #{/else}
+    </div>
+    <h2 id="info-name">${person.displayName}</h2>
+	<div id="info">
+	    <div class="info-item">
+            <span class="label">Title</span> 
+            <span class="content">${person.title}</span>
+        </div>
+		<div class="info-item">
+			<span class="label">Position</span> 
+			<span class="content">${person.position}</span>
+		</div>
+		<div class="info-item">
+			<span class="label">Department</span> 
+			<span class="content">${person.department}</span>
+		</div>
+		<div class="info-item">
+			<span class="label">Contact Information</span> 
+			<span class="content">#{include 'Public/locationLinks.html'/}, ${person.office}</span>
+			<span class="content">${person.phone}</span>
+			<span class="content"><a href="mailto: ${person.email}">${person.email}</a></span>
+		</div>
+	</div>
+	#{if page.getLinks().size() > 0}
+	    <h2>Links</h2>
+		<div id="links">
+			#{list items: page.getLinks(), as: 'link'}
+				<span class="personal-link"><a href="${link.url}" target="_blank">${link.label}</a></span>
+			#{/list}
+		</div>
+	#{/if}
+</div>
+
+	

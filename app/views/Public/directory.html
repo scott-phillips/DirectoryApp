@@ -1,0 +1,124 @@
+#{extends 'main.html' /}
+#{set title:'Library Directory' /}
+#{set contentClass:'one-column' /}
+#{set 'moreScripts'}
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+	        jQuery(".result-summary").click(function () {
+	            jQuery(this).next().slideToggle(400);
+	        });
+	    })
+    </script>
+	<script src="/directory/public/javascripts/clearForm.js" type="text/javascript" charset="utf-8"></script>
+#{/set}
+
+<div id="main">
+		<h1>Search for Library employees</h1>
+		<span>Find employees by name, department, location, or email.</span>
+		<div id="browseWidget">
+			<ul id="browseByLetter">
+				#{list items:'A'..'Z', as:'currLetter'}
+					<li class="#{if currLetter_isFirst} first #{/if}#{if currLetter == letter} highlight #{/if}#{if currLetter_isLast} last #{/if}">
+						<a href="@{Public.browse(currLetter)}">${currLetter}</a>
+					</li>
+				#{/list}
+			</ul>
+		</div>
+		<div id="searchWidget">
+			<form id="searchForm" method="post" action="@{Public.search}">
+				<div class="searchWidgetInput">
+					<label for="nameField">Name or Email: </label>
+					<input id="nameField" title="nameField" name="nameField" type="search" value="${nameField}"/>					
+				</div>
+				<div class="searchWidgetInput">
+					<label for="locationField">Location: </label>
+					<select id="locationField" title="locationField" name="locationField">
+						<option value="">All</option>
+						#{list items:locations, as:'location'}
+                          <option #{if locationField == location.getValue()}selected="true"#{/if} value="${location.getValue()}">${location.getLabel()}</option>
+                        #{/list}
+					</select>
+				</div>
+				<div class="searchWidgetInput">
+					<label for="deptField">Department: </label>
+					<select id="deptField" title="deptField" name="deptField">
+						<option value="">All</option>
+						#{list items:departments, as:'department'}						
+						  <option #{if deptField == department.getValue()}selected="true"#{/if} value="${department.getValue()}">${department.getLabel()}</option>
+						#{/list}
+					</select>
+				</div>
+				<div id="searchSubmit" class="searchWidgetInput">
+					<input id="submit" title="submit" name="submit" type="submit" value="Search">
+					<input type="button" value="Clear Form" onclick="clearForm(this.form);"/>
+				</div>
+			</form>
+		</div>
+		
+		
+		#{if people?.size() > 0}
+            <h2>Results</h2>
+            <p>Your query matched ${ people?.size() > 1 ? people?.size()+" people" : "1 person" }.</p> 
+            
+            <div id="results">
+				#{list items:people, as:'person'}
+			        <div class="result ${ person_parity}">
+			            <div class="result-summary">
+							#{if pages.get(person.netID)?.content_published }
+							     <span class="name"><a href="@{Public.viewPage(person.netID)}">${person.getFormattedName()}</a></span>
+							#{/if}
+							#{else }
+							     <span class="name">${person.getFormattedName()}</span>
+							#{/else}
+			            	<span class="phone">${person.getPhone()}</span>
+			                <span class="email">
+			                	<a href="mailto:${person.email}">${person.email}</a>
+			                </span>
+			            </div>
+			            <div class="result-extra" style="display: none;">
+			                #{if pages.get(person.netID)?.portrait?.exists() && pages.get(person.netID)?.portrait_published != null && pages.get(person.netID)?.portrait_published }
+                                 <img src="@{Public.viewPortrait(person.netID)}" alt="${person.displayName} portrait" height="100" width="75" class="portrait"/>
+                            #{/if}
+                            #{else}
+                                 <img src="@{'/public/images/evans.jpeg'}" alt="${person.displayName} portrait" height="100" width="75" class="portrait"/>
+                            #{/else}
+			                
+			                <div class="extra-item">
+                                <span class="label">Title:</span>
+                                <span class="content">${person.title}</span>
+                            </div>
+			                <div class="extra-item">
+			                    <span class="label">Position:</span>
+			                    <span class="content">${person.position}</span>
+			                </div>
+			                <div class="extra-item">
+			                    <span class="label">Location:</span>
+			                    <span class="content">
+			                    	#{include 'Public/locationLinks.html'/}, ${person.office}
+			                    </span>
+			                </div>
+			                <div class="extra-item">
+			                    <span class="label">Department:</span>
+			                    <span class="content">${person.department}</span>
+			                </div>
+			                #{if pages.get(person.netID)?.content_published || session.get("admin") != null || person.netID.equals(session.get("username"))  }
+			                    <div class="extra-item">
+			                    	#{if pages.get(person.netID)?.content_published }
+			                        	<a href="@{Public.viewPage(person.netID)}">[Homepage] </a>
+			                        #{/if}
+			                        #{if session.get("admin") != null || person.netID.equals(session.get("username")) }
+			                        	<a href="@{Admin.editHomepage(person.netID)}">[Edit]</a>
+			                        #{/if}			                        
+	                            </div>
+                            #{/if}
+			            </div>
+			        </div>
+			    #{/list}
+		    </div>
+		#{/if}
+		#{elseif ! "Public.index".equals(request?.action) & people?.size() == 0 }
+			<h2>Results</h2>
+			<p>Your query did not match anyone.</p>
+		#{/elseif}
+</div>
+

@@ -1,0 +1,42 @@
+
+/** CSS Styling specificaly for the CKEditor file browser & upload popup windows **/
+
+body {
+	background: url("../images/content-bg.gif") repeat-x scroll 0 0 #FFFFFF;
+}
+
+a {
+	color: #1F5D85;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul {
+	list-style: none;
+	margin-top: 44px;
+}
+
+li {
+	min-height: 74px;
+	clear: both;
+}
+
+
+.icon {
+    background-color: #EEEEEE;
+    float: left;
+    margin: -25px 8px 32px 0;
+}
+
+
+.image {
+	 border:   1px solid #999999;
+}
+
+a:hover .image {
+	border: 1px solid #333333;
+	
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springsource.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="testContextSource" class="org.springframework.ldap.core.support.LdapContextSource">
+      <property name="url" value="${ldap.url}" />
+      <property name="base" value="${ldap.baseDN}" />
+      <property name="userDn" value="${ldap.userDN}" />
+      <property name="password" value="${ldap.userPassword}" />
+   </bean>
+   
+   <bean id="ldapTemplate" class="org.springframework.ldap.core.LdapTemplate">
+      <constructor-arg ref="testContextSource" />
+   </bean>
+   
+   <bean id="personMapper" class="edu.tamu.directoryapp.directory.ldap.LdapPersonMapperImpl"/>
+   <bean id="departmentMapper" class="edu.tamu.directoryapp.directory.ldap.LdapDepartmentMapperImpl"/>
+    
+   <bean id="directory" class="edu.tamu.directoryapp.directory.ldap.LdapDirectoryImpl">
+   	  <property name="ldapTemplate" ref="ldapTemplate"/>
+   	  <property name="personMapper" ref="personMapper"/>
+   	  <property name="departmentMapper" ref="departmentMapper"/>
+   </bean>
+   
+</beans>

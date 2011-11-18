@@ -1,0 +1,10 @@
+#{if person?.building }
+	#{if person?.building?.contains("Annex")}<a href="${play.Play.configuration.get("location.link.annex")}">${person?.building}</a>#{/if}
+	#{elseif person?.building?.contains("Evans")}<a href="${play.Play.configuration.get("location.link.evans")}">${person?.building}</a>#{/elseif}
+	#{elseif person?.building?.contains("Cushing")}<a href="${play.Play.configuration.get("location.link.cushing")}">${person?.building}</a>#{/elseif}
+	#{elseif person?.building?.contains("Medical") | person?.building?.contains("MSL")}<a href="${play.Play.configuration.get("location.link.medical")}">${person?.building}</a>#{/elseif}
+	#{elseif person?.building?.contains("Political") | person?.building?.contains("Economic") | person?.building?.contains("PSEL")}<a href="${play.Play.configuration.get("location.link.political")}">${person?.building}</a>#{/elseif}
+	#{elseif person?.building?.contains("West") | person?.building?.contains("WCL")}<a href="${play.Play.configuration.get("location.link.west")}">${person?.building}</a>#{/elseif}
+	#{elseif person?.building?.contains("Qatar")}<a href="${play.Play.configuration.get("location.link.qatar")}">${person?.building}</a>#{/elseif}
+	#{else}${person?.building}#{/else}
+#{/if} 

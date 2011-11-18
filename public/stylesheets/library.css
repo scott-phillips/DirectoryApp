@@ -1,0 +1,567 @@
+
+/*******************************
+CSS Reset, as used on library.tamu.edu (plone-based implementation) 
+********************************/
+html{
+    color: #535353;
+    background: #1a2830;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset, img {
+    border:0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style:normal;
+    font-weight:normal;
+}
+li {
+    list-style:none;
+}
+caption, th {
+    text-align:left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before, q:after {
+    content:'';
+}
+abbr, acronym {
+    border:0;
+    font-variant:normal;
+}
+sup {
+    vertical-align:text-top;
+}
+sub {
+    vertical-align:text-bottom;
+}
+input, textarea, select {
+    font-family:inherit;
+    font-size:inherit;
+    font-weight:inherit;
+}
+legend {
+    color:#000;
+}
+body {
+    font:13px/1.231 Verdana, Lucida, Helvetica, Arial, sans-serif;
+}
+select, input, button, textarea {
+    font:99% Verdana, Lucida, Helvetica, Arial, sans-serif;
+}
+table {
+	font-size:inherit;
+}
+pre, code, kbd, samp, tt {
+    font-family:monospace;
+    line-height:100%;
+}
+
+
+/*******************************
+    Basic Library Style
+********************************/
+
+body {
+    font-size: 62.5%; /* equivalent to 10px (10px / 16px)*/
+    font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    color: #535353;
+}
+
+a {
+    color: #1f5d85;
+    text-decoration: none;
+    outline: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0.75em 0 0.25em;
+    color: #1a2830;
+    font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+cite, dfn, em {
+    font-style: italic;
+}
+
+strong, th {
+    font-weight: bold;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: #1F5D85;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 1.60em; /*17.6px*/
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.30em; /*14.3px*/
+}
+
+h3 {
+    font-size: 1.15em; /*12.65px*/
+    border-bottom: none;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.05em; /*11.55px*/
+    border-bottom: none;
+    font-weight: bold;
+}
+
+h5 {
+
+    font-size: 1em; /*11px*/
+    border-bottom: none;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: .85em; /*9.35px*/
+    border-bottom: none;
+    font-weight: bold;
+}
+
+abbr, acronym {
+    color: #535353;
+}
+
+dt {
+    font-weight: bold;
+}
+
+q {
+    font-family: Baskerville, Georgia, serif;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+label {
+    font-weight: normal;
+}
+
+blockquote {
+    color: #535353;
+}
+
+code, tt {
+    font-family: Monaco, "Courier New", Courier, monospace;
+    font-size: 1.2em;
+    color: #535353;
+}
+
+pre {
+    font-family: Monaco, "Courier New", Courier, monospace;
+    font-size: 1em;
+    color: #535353;
+}
+
+ins {
+    color: green;
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+html {
+    background-color: #1a2830;
+}
+
+p {
+    line-height: 1.5em;
+    margin: 0 0 2em;
+}
+
+table, thead, tbody, tr, th, td {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+th {
+    font-weight: bold;
+}
+
+img {
+    border: medium none;
+    vertical-align: middle;
+}
+
+ul {
+    line-height: 1.5em;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 0.5em;
+}
+.clear {
+	clear: both;
+}
+
+/***************************BASE FORMS CSS***************************/
+select, input, button, textarea {
+    font: 100% Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-size: 100%;
+    font-family: Verdana, Lucida, Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    vertical-align: baseline;
+    margin: 2px 2px 10px 0;
+    padding: 4px 3px;
+}
+
+input, button, textarea {   
+    border: 1px solid #bbb;
+    outline: 0;
+    background: #F9F9F9;
+    background: linear-gradient(center top, #f0f0f0, #ffffff) repeat scroll 0 0 #ffffff;
+    background: -moz-linear-gradient(center top, #f0f0f0, #ffffff) repeat scroll 0 0 #ffffff;
+    background: -webkit-gradient(linear, left top, left 25, from(#F9F9F9), to(#ffffff));  
+}
+
+select {
+    padding: 0;
+}
+
+/*
+ * laying down a base style for all buttons on our sites
+ * inspired by GOOGLE buttons:
+ */
+input[type="submit"], input[type="button"], input[type="reset"], button {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #F3F3F3;
+    background: linear-gradient(center top , #f9f9f9, #e2e2e2) repeat scroll 0 0 #f9f9f9;
+    background: -moz-linear-gradient(center top , #f9f9f9, #e2e2e2) repeat scroll 0 0 #f9f9f9;
+    background: -webkit-gradient(linear, left top, left 25, from(#f9f9f9), to(#e2e2e2));  
+    cursor: pointer;
+    margin: 0 8px 2px 0;
+    outline: medium none;
+    padding: 3px 6px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+input[type="file"] {
+}
+
+input:hover, textarea:hover,  
+input:focus, textarea:focus {  
+    border-color: #c9c9c9;
+    background-color: #fff;
+    background: #fff;
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+}
+
+input[type="submit"]:focus, button:focus,
+input[type="submit"]:hover, button:hover {
+    background: #e9e9e9;
+    background: linear-gradient(center top , #f9f9f9, #e9e9e9) repeat scroll 0 0 #f9f9f9;
+    background: -moz-linear-gradient(center top , #f9f9f9, #e9e9e9) repeat scroll 0 0 #f9f9f9;
+    background: -webkit-gradient(linear, left top, left 25, from(#f9f9f9), to(#e9e9e9)); 
+}
+
+form legend {
+    background-color: transparent;
+    border: medium none;
+    display: block;
+    font-size: 95%;
+    font-weight: bold;
+    line-height: 150%;
+    margin: 0;
+    padding: 0 0 0.5em;
+}
+
+form label {
+    line-height: 1.5em;
+    margin: 1em 0;
+    padding: 0 0 1em;
+}
+
+fieldset {
+    line-height: 1.5em;
+    margin: 1em 0;
+    padding: 0 1em 1em;
+    width: auto;
+}
+
+
+/*******************************
+    Basic Library Frame
+********************************/
+
+body {
+	background: url("../images/sprites-horizontal-repeat.jpg") repeat-x scroll 0 -130px #1A2830;
+	font-family: Verdana,Lucida,Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	
+}
+#wrapper {
+	margin: auto;
+	text-align: left;
+	width: 990px;
+}
+#header {
+	background: url("../images/sprites-horizontal-repeat.jpg") repeat-x scroll 0 -15px #647782;
+	height: 91px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+#header #logos {
+	display: block;
+	height: 58px;
+	text-indent: -99999px;
+}
+#header #logos #tamu-logo {
+	background: url("../images/sprites-logos-icons.jpg") no-repeat scroll 0 0 transparent;
+    float: left;
+    width: 170px;
+    height: 58px;
+}
+#header #logos #library-logo {
+	float: left;
+	width: 111px;
+	margin: 0;
+}
+#header #logos #library-logo a {
+    background: url("../images/sprites-logos-icons.jpg") no-repeat scroll -170px 0 transparent;
+    display: block;
+    height: 58px;
+    margin: 0;
+    padding: 0;
+    width: 111px;
+}
+#header #askNow {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	color: #FFFFFF;
+	font-size: 11px;
+	text-decoration: none;
+}
+#header #askNow:hover {
+	text-decoration: underline;
+}
+#header #tabs {
+	background: url("../images/sprites-logos-icons.jpg") no-repeat scroll 0 -66px transparent;
+    float: right;
+    height: 33px;
+    list-style-type: none;
+    margin: -23px 0 0;
+    padding: 0;
+    position: absolute;
+    right: 5px;
+    width: 356px;
+}
+#header #tabs li {
+	display: block;
+    float: left;
+    height: 33px;
+}
+#header #tabs li a {
+	display: block;
+    float: left;
+    height: 33px;
+    position: relative;
+    text-indent: -99999px;
+    z-index: 4;
+}
+#header #subheader {
+	background: url("../images/sprites-horizontal-repeat.jpg") repeat-x scroll 0 -85px #681121;
+    border: 1px solid #CCCCCC;
+    display: block;
+    height: 25px;
+    line-height: 24px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    top: 6px;
+    width: 988px;
+    color: #FFFFFF;
+    font-size: 10px;
+}
+#header #subheader #breadcrumb {
+	margin-left: 10px; 
+	float: left;
+	color: #FFFFFF;
+}
+#header #subheader #breadcrumb a {
+	color: #FFFFFF;
+    text-decoration: none;	
+}
+#header #subheader #auth {
+	float: right;
+	margin: 0 11px 0 0;
+}
+#header #subheader #auth a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#colophon {
+    background-color: #2E424F;
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    display: block;
+    height: 35px;
+    margin: 0;
+    padding: 5px 15px 0;
+}
+#colophon #colophon-news {
+	color: #FFFFFF;
+	font-size: 16px;
+    font-weight: normal;
+    height: 35px;
+    line-height: 35px;
+    width: 130px;
+    text-decoration: none;
+}
+#colophon #colophon-news:hover {
+	text-decoration: underline;
+}
+#colophon #colophon-follow {
+	float: right;
+	display: block;
+	color: #FFFFFF;
+	text-decoration: none;
+	margin-top: 8px;
+}
+#colophon #colophon-follow:hover,
+#colophon #colophon-news:hover {
+    text-decoration: underline;
+}
+
+#footer {
+	display: block;
+    font-size: 1.1em;
+    height: 35px;
+    margin: 12px 0 20px;
+    padding: 5px 15px 0;
+    font-size: 12px;
+}
+
+#footer #footer-giving {
+	color: #999999;
+	display: block;
+    float: left;
+    height: 30px;
+    line-height: 35px;
+    margin: 0;
+    padding: 0 0 0 0;
+    width: 170px;
+    text-decoration: none;
+}
+#footer #footer-giving:hover {
+	text-decoration: underline;
+    
+}
+#footer #footer-giving #footerGivingIcon {
+	background: url("../images/sprites-transparent-bg.png") no-repeat scroll -45px -4px transparent;
+    display: block;
+    float: left;
+    height: 25px;
+    padding: 0;
+    width: 25px;
+}
+#footer #footeractions {
+	display: block;
+    float: left;
+    margin: 8px 0 0;
+    padding: 0;
+    position: relative;
+    right: -40px;
+    width: 750px;
+}
+#footer #footeractions li {
+	display: inline;
+    float: left;
+    list-style-type: none;
+}
+#footer #footeractions li a {
+	display: block;
+    margin: 0 40px 0 0;
+    padding: 0 0 15px;
+    text-decoration: none;
+    color: #999999;
+}
+#footer #footeractions li a:hover {
+	text-decoration: underline;
+}
+#content {
+	background: url("../images/content-bg.gif") repeat-x scroll 0 0 #FFFFFF;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    display: block;
+    line-height: 1.4em;
+    min-height: 400px;
+    position: relative;
+    padding: 30px 35px;
+    color: #535353;
+    
+    
+    /** Base all font sizes within the applicaton off of this **/
+    font-size: 11px;
+}
+#content ul, #content ol, #content dl {
+    margin: 10px 10px 25px 10px;
+}
+#content ul li {
+    background: url("../images/sprites-transparent-bg.png") no-repeat scroll -127px -3px transparent;
+    padding-left: 12px;
+}
+#content ol li {
+    margin-left: 10px;
+    list-style-type: decimal;
+}
+#content dd {
+    margin-bottom: 1em;
+    margin-left: 41px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

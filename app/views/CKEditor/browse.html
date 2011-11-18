@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>File Browser</title>
+        <meta charset="${_response_encoding}">
+        <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="@{'/public/images/favicon.ico'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/ckeditor.css'}">
+        <script src="@{'/public/javascripts/jquery-1.5.2.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script type="text/javascript">
+
+        /** Select this attachment either as a link or as an image **/
+        function selectAttachment( attachmentUrl ) {
+			window.opener.CKEDITOR.tools.callFunction( '${CKEditorFuncNum}' , attachmentUrl );
+			self.close();
+			return false;
+        }
+        
+        /**
+         * Confirm deleting an attachment, and if confirmed then actually delete it.
+         */
+        function removeAttachment( attachmentid, removeUrl ) {
+		    
+		    if (jQuery("#attachment-"+attachmentid+" .remove").text().indexOf("remove") >= 0) {
+		        jQuery("#attachment-"+attachmentid+" .remove").text("(Are you sure?)");
+		    } else {
+		        jQuery.ajax({
+		            url: removeUrl,
+		            type: 'DELETE',
+		            dataType: 'json',
+		            success: function(data) {
+		                if (data.status == "success") {
+		                    jQuery('#attachment-'+attachmentid).remove();
+		                    
+		                    /** If they deleted the last file, close the popup window **/
+		                    if (jQuery("li").length == 0) {
+		                          self.close(); 
+		                    }
+		                } else {
+		                    alert("Unable to remove attachment.");
+		                }
+		            },
+		            error: function() {
+		                alert("Unable to remove attachment.");
+		            }
+		        });
+		    }
+		    
+		    return false;
+		} 
+        
+        
+        
+        </script>
+    </head>
+    <body>
+        <h3>#{if "images".equals(type)}Image#{/if}#{else}File#{/else} Attachments</h3>
+    
+	    #{if attachments?.size() > 0}
+	    
+	    <p>Select #{if "images".equals(type)}an image#{/if}#{else}a file#{/else} below to add it to your document. You may upload new #{if "images".equals(type)}images#{/if}#{else}files#{/else} using the "upload" tab under the previous dialog box. <a href="#" onclick="self.close(); return false">(close window)</a></p>
+	    
+	    <ul>
+	    #{list items:attachments, as:'attachment'}
+	        <li id="attachment-${ attachment.id }"> 
+	            <a href="#" onclick="return selectAttachment('@{Public.viewAttachment(user.netID,attachment.name)}');">
+	            #{if attachment.isImage() }
+                   <img class="icon image" src="@{Public.viewAttachment(user.netID,attachment.name)}" height="64" width="64"/>
+                #{/if}
+                #{elseif attachment.isPDF()}
+                   <img class="icon PDF" src="@{'/public/images/pdf.png'}" height="64" width="64"/>
+                #{/elseif}
+                #{elseif attachment.isWord()}
+                   <img class="icon word" src="@{'/public/images/word.png'}" height="64" width="64"/>
+                #{/elseif}
+                #{elseif attachment.isPowerPoint()}
+                   <img class="icon powerpoint" src="@{'/public/images/ppt.png'}" height="64" width="64"/>
+                #{/elseif}
+                #{else}
+                   <img class="icon file" src="@{'/public/images/file.png'}" height="64" width="64"/>
+                #{/else}
+	            ${ attachment.name }</a>
+	            <a href="#" onclick="return removeAttachment('${ attachment.id }','@{Public.viewAttachment(user.netID,attachment.name)}');" class="remove ajax">(remove)</a>
+	        </li>
+	    #{/list}
+	    </ul>
+	    #{/if}
+	    #{else}
+	       <p> No #{if "images".equals(type)}images#{/if}#{else}files#{/else} have been uploaded to the server. Use the "upload" tab to upload a new #{if "images".equals(type)}image#{/if}#{else}file#{/else}. <a href="#" onclick="self.close(); return false">(close window)</a></p>
+	    #{/else}
+    </body>
+</html>
+

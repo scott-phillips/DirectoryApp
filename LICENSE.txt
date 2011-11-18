@@ -1,0 +1,11 @@
+
+This project is composed of two components each with separate licenses:
+
+1) The CKEditor javascript library located in /public/ckeditor/ is 
+   licensed under a LGPL license. For more information visit the project's
+   license page:
+
+   http://ckeditor.com/license
+
+2) All other material (Java, Javascript, CSS, HTML, and others) is 
+   copyright Texas A&M University.

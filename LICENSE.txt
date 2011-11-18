@@ -9,3 +9,5 @@ This project is composed of two components each with separate licenses:
 
 2) All other material (Java, Javascript, CSS, HTML, and others) is 
    copyright Texas A&M University.
+
+3) And don't you forget it!

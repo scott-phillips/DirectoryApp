@@ -1,0 +1,10 @@
+secure
+spring-1.0.2
+lib
+eclipse
+modules
+.settings
+.project
+.classpath
+test-result
+tmp
